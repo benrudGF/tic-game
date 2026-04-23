@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 
 const app = express();
-const PORT = 3000; // Use port 3000 for simplicity and Replit compatibility
+const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(express.json());
