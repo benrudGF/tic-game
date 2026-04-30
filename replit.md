@@ -25,3 +25,14 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - `pnpm --filter @workspace/api-server run dev` — run API server locally
 
 See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
+
+---
+
+## 📌 Project Documentation
+
+For detailed information about the project, including checkpoints, goals, and deliverables, refer to the following documents:
+
+- **[Project Brief](PROJECT_BRIEF.md)** — High-level overview of the project, including checkpoints and key milestones.
+- **[Checkpoints](CHECKPOINTS.md)** — Detailed breakdown of each checkpoint, its status, and associated tasks.
+
+These files are located in the root directory of the repository and provide comprehensive insights into the project's progress and structure.
