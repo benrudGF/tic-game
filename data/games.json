@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "id": "game_1",
+    "players": ["benrud", "player2"],
+    "board": ["", "", "", "", "", "", "", "", ""],
+    "currentPlayer": "benrud",
+    "status": "in_progress",
+    "winner": null,
+    "moves": [
+      {"player": "benrud", "position": 0, "timestamp": "2026-04-30T00:00:00Z"},
+      {"player": "player2", "position": 1, "timestamp": "2026-04-30T00:01:00Z"}
+    ],
+    "createdAt": "2026-04-30T00:00:00Z",
+    "endedAt": null
+  }
+]
