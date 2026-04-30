@@ -88,6 +88,26 @@ button:hover {
     color: #1976d2;
 }
 
+#button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#button-group button {
+    width: auto;
+    padding: 0.5rem 1rem;
+}
+
+#new-game-btn {
+    background-color: #4CAF50;
+}
+
+#new-game-btn:hover {
+    background-color: #388e3c;
+}
+
 #logout-btn {
     background-color: #f44336;
 }
