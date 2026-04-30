@@ -4,93 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe Game</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f8ff;
-            color: #333;
-        }
-        .container {
-            text-align: center;
-        }
-        #auth-section, #game-section {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-        }
-        #game-section {
-            display: none;
-        }
-        h2 {
-            margin-top: 0;
-        }
-        input, button {
-            margin: 0.5rem 0;
-            padding: 0.5rem;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        #game-board {
-            display: grid;
-            grid-template-columns: repeat(3, 100px);
-            grid-template-rows: repeat(3, 100px);
-            gap: 5px;
-            justify-content: center;
-            margin: 1rem auto;
-        }
-        .cell {
-            width: 100px;
-            height: 100px;
-            background-color: white;
-            border: 2px solid #ccc;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 3rem;
-            cursor: pointer;
-        }
-        .cell:hover {
-            background-color: #f0f0f0;
-        }
-        #welcome-message {
-            margin-bottom: 1rem;
-        }
-        #logout-btn {
-            background-color: #f44336;
-        }
-        #logout-btn:hover {
-            background-color: #d32f2f;
-        }
-        #register-btn {
-            background-color: #2196F3;
-        }
-        #register-btn:hover {
-            background-color: #0b7dda;
-        }
-        #login-btn {
-            background-color: #FF9800;
-        }
-        #login-btn:hover {
-            background-color: #e68a00;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -107,6 +21,7 @@
         
         <div id="game-section">
             <div id="welcome-message"></div>
+            <div id="turn-indicator">Player X's Turn</div>
             <button id="logout-btn">Logout</button>
             <div id="game-board"></div>
         </div>
