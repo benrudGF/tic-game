@@ -1,6 +1,8 @@
 [
   {
     "username": "benrud",
-    "password": "benrud"
+    "password": "benrud",
+    "createdAt": "2026-04-30T00:00:00Z",
+    "lastLogin": "2026-04-30T00:00:00Z"
   }
 ]
