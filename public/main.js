@@ -6,6 +6,7 @@ let gameState = ['', '', '', '', '', '', '', '', ''];
 // DOM elements
 const gameBoard = document.getElementById("game-board");
 const turnIndicator = document.getElementById("turn-indicator");
+const newGameBtn = document.getElementById("new-game-btn");
 
 // Authentication handlers
 document.getElementById("register-btn").addEventListener("click", async () => {
@@ -57,6 +58,12 @@ document.getElementById("logout-btn").addEventListener("click", async () => {
         document.getElementById("auth-section").style.display = "block";
         resetGame();
     }
+});
+
+// New Game button handler
+newGameBtn.addEventListener("click", () => {
+    resetGame();
+    renderGameBoard();
 });
 
 async function checkAuthStatus() {
