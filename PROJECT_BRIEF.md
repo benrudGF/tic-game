@@ -21,11 +21,11 @@ This document outlines the project brief for the Tic-Game repository, including 
   - Route and middleware configuration.
 - **Status**: ✅ Completed
 
-### 3. **Database Integration**
-- **Goal**: Set up PostgreSQL with Drizzle ORM.
+### 3. **Data Storage**
+- **Goal**: Store data in JSON files within the `/data` directory.
 - **Deliverables**:
-  - Database schema definitions.
-  - Migration scripts.
+  - JSON file structure for game data (e.g., game state, user sessions).
+  - Helper functions for reading/writing JSON files.
 - **Status**: ✅ Completed
 
 ### 4. **Validation & Codegen**
@@ -66,12 +66,11 @@ This document outlines the project brief for the Tic-Game repository, including 
 ---
 
 ## Additional Notes
-- **Monorepo Structure**: Each package (`@workspace/api-spec`, `@workspace/db`, `@workspace/api-server`) manages its own dependencies.
+- **Monorepo Structure**: Each package (`@workspace/api-spec`, `@workspace/api-server`) manages its own dependencies.
 - **Key Commands**:
   - `pnpm run typecheck` — Full typecheck across all packages.
   - `pnpm run build` — Typecheck + build all packages.
   - `pnpm --filter @workspace/api-spec run codegen` — Regenerate API hooks and Zod schemas.
-  - `pnpm --filter @workspace/db run push` — Push DB schema changes (dev only).
   - `pnpm --filter @workspace/api-server run dev` — Run API server locally.
 
 ---
