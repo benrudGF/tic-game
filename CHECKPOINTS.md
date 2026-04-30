@@ -10,7 +10,7 @@ This document provides a detailed breakdown of the project checkpoints, their st
 |------------------------|-----------------------------------------------|-----------------|---------------------------------------------------------------------------------|
 | Initial Setup          | Set up monorepo with pnpm workspaces          | ✅ Completed    | `pnpm-workspace.yaml`, TypeScript/Node.js alignment                              |
 | API Framework          | Integrate Express 5 for API development       | ✅ Completed    | Basic API server, route/middleware configuration                                |
-| Database Integration   | Set up PostgreSQL with Drizzle ORM            | ✅ Completed    | Database schema, migration scripts                                              |
+| Data Storage           | Store data in JSON files within `/data`       | ✅ Completed    | JSON file structure, helper functions for reading/writing JSON files            |
 | Validation & Codegen   | Implement Zod and Orval for API codegen       | ✅ Completed    | Zod schemas, Orval configuration for OpenAPI spec                                |
 | Build & Typecheck      | Ensure type safety and build compatibility     | ✅ Completed    | `typecheck` and `build` scripts, esbuild configuration                            |
 | UI/UX Design           | Design and implement game interface           | 🚧 In Progress  | Frontend components, responsive design                                          |
@@ -37,11 +37,11 @@ This document provides a detailed breakdown of the project checkpoints, their st
 - **Dependencies**: Initial Setup
 - **Blockers**: None
 
-### 3. **Database Integration**
-- **Objective**: Integrate PostgreSQL with Drizzle ORM for database management.
+### 3. **Data Storage**
+- **Objective**: Store data in JSON files within the `/data` directory.
 - **Tasks**:
-  - Define database schemas.
-  - Write migration scripts for schema changes.
+  - Define JSON file structure for game data (e.g., game state, user sessions).
+  - Write helper functions for reading/writing JSON files.
 - **Dependencies**: Initial Setup
 - **Blockers**: None
 
@@ -50,7 +50,7 @@ This document provides a detailed breakdown of the project checkpoints, their st
 - **Tasks**:
   - Use Zod for runtime data validation.
   - Configure Orval to generate API hooks and Zod schemas from OpenAPI specs.
-- **Dependencies**: API Framework, Database Integration
+- **Dependencies**: API Framework
 - **Blockers**: None
 
 ### 5. **Build & Typecheck**
@@ -59,7 +59,7 @@ This document provides a detailed breakdown of the project checkpoints, their st
   - Set up `pnpm run typecheck` for full type checking.
   - Configure `pnpm run build` for building all packages.
   - Use esbuild for CJS bundle generation.
-- **Dependencies**: Initial Setup, API Framework, Database Integration
+- **Dependencies**: Initial Setup, API Framework
 - **Blockers**: None
 
 ### 6. **UI/UX Design**
