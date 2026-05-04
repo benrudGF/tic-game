@@ -3,29 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="public/styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="login-box">
-            <h1>Login</h1>
-            <form id="loginForm">
-                <div class="input-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                </div>
-                <button type="submit" class="btn">Login</button>
+    <div class="auth-card">
+        <div class="auth-form">
+            <h2>Register</h2>
+            <form>
+                <input type="text" placeholder="Username" value="benrud">
+                <input type="password" placeholder="Password">
+                <button type="submit">Sign Up</button>
             </form>
-            <p class="signup-link">
-                Don't have an account? <a href="signup.html">Create a New Account</a>
-            </p>
+        </div>
+
+        <div class="auth-form">
+            <h2>Login</h2>
+            <form>
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <button type="submit">Log In</button>
+            </form>
         </div>
     </div>
-    <script src="main.js"></script>
+
+    <div class="game-container">
+        <h2>Player X's Turn</h2>
+        <button>New Game</button>
+        <button>Logout</button>
+    </div>
 </body>
 </html>
