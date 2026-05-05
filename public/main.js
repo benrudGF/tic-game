@@ -9,25 +9,6 @@ const turnIndicator = document.getElementById("turn-indicator");
 const newGameBtn = document.getElementById("new-game-btn");
 
 // Authentication handlers
-document.getElementById("register-btn").addEventListener("click", async () => {
-    const username = document.getElementById("reg-username").value;
-    const password = document.getElementById("reg-password").value;
-
-    const response = await fetch("/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password }),
-    });
-
-    if (response.ok) {
-        const data = await response.json();
-        alert(`Registration successful! Welcome, ${data.username}`);
-        updateUI(data.username);
-    } else {
-        alert("Error registering user.");
-    }
-});
-
 document.getElementById("login-btn").addEventListener("click", async () => {
     const username = document.getElementById("login-username").value;
     const password = document.getElementById("login-password").value;
@@ -106,20 +87,15 @@ function renderGameBoard() {
 }
 
 function handleCellClick(index) {
-    // Don't allow moves if game is not active or cell is already filled
     if (!gameActive || gameState[index] !== '') {
         return;
     }
 
-    // Update game state
     gameState[index] = currentPlayer;
-    
-    // Update UI
     const cells = document.querySelectorAll(".cell");
     cells[index].textContent = currentPlayer;
     cells[index].classList.add(currentPlayer.toLowerCase());
 
-    // Check for win or draw
     if (checkWin()) {
         turnIndicator.textContent = `Player ${currentPlayer} Wins!`;
         turnIndicator.style.color = currentPlayer === 'X' ? '#1976d2' : '#e65100';
@@ -132,16 +108,15 @@ function handleCellClick(index) {
         return;
     }
 
-    // Switch player
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
     updateTurnIndicator();
 }
 
 function checkWin() {
     const winConditions = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8], // rows
-        [0, 3, 6], [1, 4, 7], [2, 5, 8], // columns
-        [0, 4, 8], [2, 4, 6]             // diagonals
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],
+        [0, 4, 8], [2, 4, 6]
     ];
 
     return winConditions.some(condition => {
