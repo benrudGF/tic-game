@@ -13,7 +13,7 @@ body {
 
 /* Auth card styles */
 .auth-card {
-    background-color: #09b3eb; /* Light-blue background */
+    background-color: #09b3eb;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -52,6 +52,19 @@ body {
 
 .auth-form button:hover {
     background-color: #45a049;
+}
+
+.auth-form p {
+    margin-top: 10px;
+}
+
+.auth-form a {
+    color: #1976d2;
+    text-decoration: none;
+}
+
+.auth-form a:hover {
+    text-decoration: underline;
 }
 
 /* Game container styles */
